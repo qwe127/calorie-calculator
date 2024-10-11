@@ -1,0 +1,629 @@
+/* *{
+    background-color: hsla(240, 5%, 5%, 0.8);
+} */
+body {
+    background-image: url("33.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: hsla(240, 10%, 5%, 0.3);
+    height: 100vh;
+    overflow-x: hidden;
+    margin: auto;
+
+}
+
+.ingredients-wrapper{
+    background: linear-gradient(
+        hsla(240, 10%, 60%, 0.144), 
+        hsla(240, 4%, 18%, 0.747),
+        hsla(240, 10%, 10%, 0.5));
+    border-color: rgba(0, 0, 0, 0.192);
+    border-radius: 0.5rem;
+    padding: 1rem;  
+}
+
+.ingredients-select-element{
+    text-align: center;
+    margin: 10;
+    background-color: hsl(240, 7%, 5%);
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin: auto;
+    border-radius: 8px;
+    border: 0.1rem solid;
+    border-color: hsl(240, 5%, 50%, 0.1);
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.2s;
+    width: 15rem;
+    height: 2.4rem;
+    max-width: 30rem;
+
+}
+
+.ingredients-select-element:hover{
+    border-color:hsl(40, 50%, 50%);
+}
+
+.ingredients-select-element option{
+    font-size: 1rem;
+    border: 0.1rem solid;
+    background-color: hsl(240, 5%, 10%);
+    border-style: solid;
+    font-weight: 100;
+}
+
+.ingredients-dropdown-and-delete-icon{
+    flex-direction: row;
+    display: flex;
+    max-width: 30rem;
+    margin: auto;
+}
+
+
+.ingredients-dropdown-and-delete-icon p{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ingredients-svg{
+    height: 5rem;
+    width: 5rem;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.25s;
+    display: block;
+}
+
+.ingredients-svg:hover{
+    color: hsl(0, 50%, 50%);
+    cursor: pointer;
+}
+.ingredients-svg:active{
+    color: hsl(0, 50%, 50%);
+    cursor: pointer;
+}
+
+.ingredients-dropdown-delete-weight-container{
+    display: flex;
+}
+
+.ingredients-weight-input{
+    text-align: center;
+    margin: 0;
+    background-color: hsl(240, 7%, 5%);
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin: auto;
+    border-style: solid;
+    border-radius: 8px;
+    border: 0.1rem solid;
+    border-color: hsl(240, 5%, 50%, 0.1);
+    border: none;
+    transition: border-color 0.2s;
+    height: 1rem;
+    width: 30rem;
+    font-weight: bold;
+}
+
+.ingredients-macro-container{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+
+        hsla(240, 10%, 60%, 0.384), 
+        hsla(240, 10%, 20%, 0.7),
+        hsla(240, 5%, 10%, 0.7));
+    width: 15rem;
+    height: 13rem;
+    padding: 0.2rem;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.ingredients-macro-container p{
+    margin: 0.1rem;
+    font-size: 1rem;
+}
+
+.ingredients-macro-container h2{
+    margin: 0rem;
+    text-align: center;
+    background-color: hsl(240, 7%, 10%, 1);
+    width: 100%;
+    margin: auto;
+}
+
+.ingredients-ingredient-macro{
+    background-color: hsl(240, 7%, 30%, 0.3);
+    width: 12rem;
+    margin: auto;
+    text-align: left;
+    border: 0.1rem transparent hsl(240, 7%, 10%, 0.3);
+
+}
+
+.ingredients-add-button{
+    background-color: hsl(240, 7%, 5%);
+    font-size: 1.2rem;
+    width: 70%;
+    margin: auto;
+    font-weight: 660;
+}
+
+.ingredients-main-container{
+    display: flex;
+
+    margin: auto;
+    align-items: center;
+    height: auto
+}
+
+.ingredients-ingredients{    
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+        hsla(240, 10%, 60%, 0.384), 
+        hsla(240, 10%, 20%, 0.7),
+        hsla(240, 5%, 10%, 0.7));
+    width: 15rem;
+    padding: 0.2rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.ingredients-ingredients p{
+    margin: 0.1rem;
+    font-size: 1rem;
+}
+
+.ingredients-ingredients h2{
+    margin: 0rem;
+    text-align: center;
+    background-color: hsl(240, 7%, 10%, 1);
+    width: 100%;
+    margin: auto;
+}
+
+input {
+    border-radius: 8px;
+    border: 0.1rem solid transparent;
+    padding: 0.6em 1.2em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    transition: border-color 0.2s;
+}
+
+/* .main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+} */
+
+/* .main-container h2 {
+    margin: 0;
+} */
+
+.dish-object-container li {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    font-size: 0.8rem; 
+    text-align: left;
+
+}
+
+.dish-object-container ul {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.dish-object-container {
+    align-items: center;    
+    overflow-y: scroll;
+    height: 10rem;
+    max-height: 15rem;
+    /* background-color: hsla(120, 9%, 13%, 0.432); */
+    padding: 1rem;
+    padding-top: 0px;
+}
+
+.dish-object-container h3 {
+    align-items: center;    
+    text-align: center;
+    max-height: 15rem;
+    margin: 0;
+}
+
+.ingredients-name-and-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    background-color: hsl(240, 7%, 13%, 1);
+    width: 100%;
+
+    margin-top: 0.2rem;
+}
+
+.ingredients-name-and-icon h3{
+    font-weight: 700;
+}
+.ingredients-name-and-icon svg{
+    width: 3rem;
+    height: 1.8rem;
+    align-items: center;
+    transition: color 0.25s;
+    
+}
+.ingredients-name-and-icon svg:hover{
+    color: hsl(0, 50%, 50%);
+    cursor: pointer;
+}
+.ingredients-name-and-icon svg:active{
+    color: hsl(0, 50%, 50%);
+    cursor: pointer;
+}
+
+.ingredients-dish-ingredient-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredients-dish-ingredient-macro{
+    background-color: hsl(240, 7%, 30%, 0.4);
+    list-style-type: none;
+    margin: auto;
+    width: 100%;
+}
+
+.ingredients-dish-ingredient-macro li{
+
+    font-size: 0.9rem;
+}
+
+.ingredients-total-main h2{
+    margin: 0rem;
+    text-align: center;
+    background-color: hsl(240, 7%, 10%, 1);
+    width: 100%;
+    margin: auto;
+}
+.ingredients-total-main{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+
+        hsla(240, 10%, 60%, 0.384), 
+        hsla(240, 10%, 20%, 0.7),
+        hsla(240, 5%, 10%, 0.7));
+
+    padding: 0.2rem;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+
+.ingredients-total {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: auto;
+}
+
+.ingredients-total p{
+    margin: 0.4px;
+    font-size: 1rem;
+}
+
+.ingredients-total-macro{
+    background-color: hsl(240, 7%, 30%, 0.4);
+    margin: auto;
+    background-color: hsl(240, 7%, 30%, 0.3);
+    width: 12rem;
+    margin: auto;
+    text-align: left;
+    border: 0.1rem transparent hsl(240, 7%, 10%, 0.3);
+
+    font-size: 1.1rem;
+}
+
+.savedish-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.ingredients-total{
+    width: 15rem;
+}
+
+.ingredients-total button{
+    background-color: hsl(240, 7%, 5%);
+    font-size: 1rem;
+    margin: auto;
+    font-weight: 660;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ingredients-total input{
+    background-color: hsl(240, 7%, 5%);
+    font-size: 1.2rem;
+    margin: auto;
+    font-weight: 660;
+    text-align: center;
+    max-width: 7rem;
+}
+
+.buttons-container{
+    font-size: 1.2rem;
+    margin: auto;
+    margin-top: 1rem;
+    font-weight: 660;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.buttons-container button{
+    background-color: hsl(240, 7%, 5%);
+    font-size: 1.2rem;
+    margin: auto;
+    font-weight: 660;
+}
+
+@media screen and (max-width: 735px ) {    
+    .ingredients-main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .ingredients-weight-input{
+        width: 7rem;
+        font-size: small;
+        height: 1.5rem;
+    }
+    
+    .ingredients-dropdown-delete-weight-container{
+        padding: 0;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .ingredients-svg{
+        height: 2.5rem;
+        width: 2.5rem;
+        position: relative;
+        right: 0rem;
+        margin: auto;
+    }
+
+    .ingredients-total-main{
+        margin: 0;
+        width: 15rem;
+    }
+
+    .ingredients-dish-macro-container{
+        flex-direction: column;
+    }
+
+    .ingredients-select-element{
+        width: 9rem;
+    }
+    
+    .ingredients-used-ingredients-container{
+        height: 10rem;
+    }
+
+    .ingredients-original-macro{
+        height: 10rem;
+    }
+}
+
+optgroup{
+    font-style: normal;
+    font-weight: bold;
+}
+
+.pop-up{
+    display: flex;
+    background: linear-gradient(
+        hsla(240, 5%, 15%, 0.98), 
+        hsla(240, 5%, 18%, 0.98),
+        hsla(240, 5%, 13%, 0.98));
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ingredients-yes-no-buttons{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.ingredients-wrapper.active-modal {
+    filter: blur(3px) brightness(0.4);
+}
+
+.ingredients-dish-macro-container{
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+    background: linear-gradient(
+        hsla(240, 10%, 10%, 0.4), 
+        hsla(240, 10%, 20%, 0.7),
+        hsla(240, 5%, 5%, 0.9));
+}
+
+.ingredients-calulated-macro{
+
+    margin: auto;
+    text-align: left;
+    border: 0.1rem transparent hsl(240, 7%, 10%, 0.3);
+    width: 15rem;
+    height: 15rem;
+}
+
+.ingredients-calulated-macro h3{
+    margin: 0rem;
+    text-align: center;
+    background-color: hsl(240, 7%, 10%, 1);
+    width: 100%;
+    margin: auto;
+}
+
+.ingredients-calulated-macro p{
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+
+.ingredients-original-macro{
+
+    margin: auto;
+    text-align: left;
+    border: 0.1rem transparent hsl(240, 7%, 10%, 0.3);
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+}
+
+.ingredients-original-macro h3{
+    margin: 0rem;
+    text-align: center;
+    background-color: hsl(240, 7%, 10%, 1);
+    width: 100%;
+    margin: auto;
+}
+
+.ingredients-original-macro p{
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.ingredients-used-ingredients-container{
+
+    margin: auto;
+    text-align: left;
+    border: 0.1rem transparent hsl(240, 7%, 10%, 0.3);
+    width: 15rem;
+    height: 15rem;
+}
+
+.ingredients-used-ingredients-container p{
+    margin: 0.1rem;
+    font-size: large;
+    text-align: center;
+    background-color: hsl(240, 7%, 10%, 1);
+    padding: 0.4rem;
+}
+
+.ingredients-used-ingredients-container h3{
+    margin: 0rem;
+    text-align: center;
+    background-color: hsl(240, 7%, 10%, 1);
+
+    margin: auto;
+}
+
+.used-ingredients{
+    margin: 0;
+
+    align-items: center;    
+    overflow-y: scroll;
+    max-height: 10rem;
+    max-height: 10rem;
+    padding: 1rem;
+    padding-top: 0px;
+    border-radius: 5px;
+}
+
+.used-ingredients li{
+    list-style-type: none;
+    margin: 0.1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    background-color: hsl(240, 20%, 20%, 0.2);
+    width: 9rem;
+    border-color: hsl(240, 5%, 10%, 0.5);
+    border-style: solid;
+    padding: 0.3rem;
+    margin: auto;
+    border-radius: 3px;
+    border-width: 0.15rem;
+    border-bottom: none;
+}
+
+.ingredients-calculated-macro-div{
+    background-color: hsl(240, 20%, 30%, 0.2);
+    width: 12rem;
+    margin: auto;
+    text-align: left;
+    border: 0.1rem transparent hsl(240, 7%, 10%, 0.3);
+}
+
+.main-dish-container h2{
+    margin: 0.3rem;
+    background-color: hsl(240, 5%, 5%, 0.5)
+}
+
+@media screen and (max-width: 735px ){
+    .ingredients-original-macro{
+        height: 10rem;
+    }
+    .ingredients-calulated-macro{
+        height: 10rem;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+header button {
+    background-color: hsl(240, 7%, 5%);
+    font-size: 1rem;
+    width: 70%;
+    margin: auto;
+    font-weight: 660;
+    height: 4.5rem;
+}
+
+header button:hover{
+    border-color:hsl(40, 50%, 50%);
+}
+
+* {
+    overflow-y: hidden;
+}
+
