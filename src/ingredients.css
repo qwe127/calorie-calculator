@@ -657,10 +657,6 @@ header button:hover{
     border-color:hsl(40, 50%, 50%);
 }
 
-* {
-    overflow-y: hidden;
-}
-
 @media screen and (max-height: 550px ){
     body{
         height: 100dvh;
@@ -718,4 +714,11 @@ header button:hover{
 header{
     padding: 0;
     margin: 0;
+}
+
+.empty{
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    font-size: 0.5;
 }
