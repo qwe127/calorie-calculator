@@ -233,6 +233,7 @@ function IngredientComponent(){
                                 setDishes={setDishes}
                                 weightInput={weightInput}
                                 selectorRef={selectorRef}
+                                data={data}
                             />                     
                         </div>
                         {name != '' ? <input className='ingredients-weight-input' value={weightInput} onClick={() => weightInput <= 0 && setWeight('')} onChange={(e)=>{performCalculation(e.target.value); console.log(weightInput); setWeight(e.target.value)}} placeholder='Input weight' type='number' min='0' max='10000' style={weightInput <= 0 ? {borderColor: "red"} : null}></input> : <></>}

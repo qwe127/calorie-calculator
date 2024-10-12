@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function DropDownList({setName, getDishIngredients, setDefaultCal, setDefaultCarb, setDefaultFat, setDefaultProt, setDefaultWeight, setIsDish, performCalculation, ingredients, dishes, weightInput, selectorRef}){
+function DropDownList({data, setName, getDishIngredients, setDefaultCal, setDefaultCarb, setDefaultFat, setDefaultProt, setDefaultWeight, setIsDish, performCalculation, ingredients, dishes, weightInput, selectorRef}){
 
     function dropDownUpdater(type) {
         if (type == 'ingredients'){
@@ -8,7 +8,7 @@ function DropDownList({setName, getDishIngredients, setDefaultCal, setDefaultCar
             ingredients.map((i, index) => {
                 console.log(ingredients.length)
                 return(
-                    <option value={i.name} onClick={() => {performCalculation(weightInput, i.name); setName(i.name); setIsDish(false)}
+                    <option value={i.name} onClick={() => {performCalculation(weightInput, i.name); setName(i.name)}
                                       } key={i.name+index}>{i.name}</option>
                 )
             })
@@ -17,24 +17,41 @@ function DropDownList({setName, getDishIngredients, setDefaultCal, setDefaultCar
             return (
                 dishes.map((i) => {
                 return(
-                    <option value={i.name} onClick={(e) => {performCalculation(weightInput, i.name);
-                                                            setName(i.name);
-                                                            getDishIngredients(e.target.value);
-                                                            setDefaultCal(i.calories);
-                                                            setDefaultCarb(i.carbohydrates);
-                                                            setDefaultFat(i.fats);
-                                                            setDefaultProt(i.proteins); 
-                                                            setDefaultWeight(i.weight)
-                                                            setIsDish(true)}} key={i.name+1}>{i.name}</option>
+                    <option value={i.name} onClick={() => {performCalculation(weightInput, i.name);
+                                                            }} key={i.name+1}>{i.name}</option>
                     )
                 })
             )
         }
     }
 
+    function checkIfDish(event){
+        data.map(i => {
+            if (i.name === event.target.value){
+                if (i.dish){
+                    console.log(i.name)
+                    console.log(event.target.value)
+                    getDishIngredients(event.target.value);
+                    setDefaultCal(i.calories);
+                    setDefaultCarb(i.carbohydrates);
+                    setDefaultFat(i.fats);
+                    setDefaultProt(i.proteins); 
+                    setDefaultWeight(i.weight);
+                    setIsDish(true);
+                    console.log('is a dish')
+                    return      
+                }
+                else if (!i.dish){
+                    setIsDish(false);
+                    console.log('not a dish')
+                }
+            } 
+        })
+    }
+
     return(
         ingredients.length || dishes.length ?
-        <select className='ingredients-select-element' id='ingredients' ref={selectorRef} onClick={()=>dropDownUpdater('ingredients')} onChange={(e)=>{setName(e.target.value)}}>
+        <select className='ingredients-select-element' id='ingredients' ref={selectorRef} onClick={()=>dropDownUpdater('ingredients')} onChange={(e)=>{setName(e.target.value); checkIfDish(e)}}>
                 <optgroup label="Ingredients:">
                 {
                     dropDownUpdater('ingredients')
@@ -52,6 +69,7 @@ function DropDownList({setName, getDishIngredients, setDefaultCal, setDefaultCar
 }
 
 DropDownList.propTypes = {
+    data: PropTypes.any,
     setName: PropTypes.any,
     getDishIngredients: PropTypes.any, 
     setDefaultCal: PropTypes.any, 
