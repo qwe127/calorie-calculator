@@ -47,7 +47,7 @@ function DropDownList({setName, getDishIngredients, setDefaultCal, setDefaultCar
                 </optgroup>
         </select>
         :
-        <p>The list is empty.</p>       
+        <p className='empty'>The list is empty.</p>       
     )
 }
 

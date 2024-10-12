@@ -98,6 +98,10 @@ body {
 .ingredients-dropdown-delete-weight-container{
     display: flex;
 }
+.ingredients-dropdown-delete-weight-container p{
+    text-align: center;
+    margin: auto;
+}
 
 .ingredients-weight-input{
     text-align: center;
