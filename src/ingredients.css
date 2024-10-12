@@ -679,13 +679,15 @@ header button:hover{
         height: 75dvh;
     }
     .add-component-main-container input{
-        height: 10rem;
+        height: 2rem;
         margin: 0;
         padding: 0;
         font-size: 0.3rem;
+        border-radius: 0.1rem;
+        padding: 0.1rem;
     }
     .add-component-main-container button{
-        height: 10rem;
+        height: 5rem;
         margin: auto;
         padding: 0;
         font-size: 1rem;
@@ -721,4 +723,13 @@ header{
     text-align: center;
     margin: auto;
     font-size: 0.5;
+}
+
+@media screen and (max-height: 812px) and (max-width: 800px){
+    .ingredients-main-container *{
+        font-size: 1rem;
+        margin: 0.1rem;
+        margin: auto;
+        border-radius: 0.2rem;
+    }
 }
