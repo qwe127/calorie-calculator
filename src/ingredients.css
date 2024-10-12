@@ -1,27 +1,31 @@
-/* *{
-    background-color: hsla(240, 5%, 5%, 0.8);
-} */
+header button{
+    display: flex;
+    align-items: center;
+    width: 80dvw;
+    margin: auto;
+    justify-content: space-around;
+    min-width: 7.8rem;
+}
 body {
-    background-image: url("33.jpg");
+    background-image: url(/33.jpg);
     background-size: cover;
     justify-content: center;
     align-items: center;
     display: flex;
     background-color: hsla(240, 10%, 5%, 0.3);
-    height: 100vh;
+    height: 100dvh;
     overflow-x: hidden;
     margin: auto;
-
 }
+
 
 .ingredients-wrapper{
     background: linear-gradient(
-        hsla(240, 10%, 60%, 0.144), 
-        hsla(240, 4%, 18%, 0.747),
+        hsla(240, 10%, 60%, 0.2), 
+        hsla(240, 4%, 18%, 0.5),
         hsla(240, 10%, 10%, 0.5));
     border-color: rgba(0, 0, 0, 0.192);
     border-radius: 0.5rem;
-    padding: 1rem;  
 }
 
 .ingredients-select-element{
@@ -50,7 +54,7 @@ body {
 .ingredients-select-element option{
     font-size: 1rem;
     border: 0.1rem solid;
-    background-color: hsl(240, 5%, 10%);
+    background-color: hsla(240, 6%, 10%, 0.5);
     border-style: solid;
     font-weight: 100;
 }
@@ -98,7 +102,7 @@ body {
 .ingredients-weight-input{
     text-align: center;
     margin: 0;
-    background-color: hsl(240, 7%, 5%);
+    background-color: hsl(240, 7%, 5%, 0.8);
     font-size: 1.1rem;
     font-weight: 100;
     margin: auto;
@@ -118,9 +122,9 @@ body {
     flex-direction: column;
     background: linear-gradient(
 
-        hsla(240, 10%, 60%, 0.384), 
-        hsla(240, 10%, 20%, 0.7),
-        hsla(240, 5%, 10%, 0.7));
+        hsla(240, 10%, 60%, 0.3), 
+        hsla(240, 10%, 20%, 0.3),
+        hsla(240, 5%, 10%, 0.3));
     width: 15rem;
     height: 13rem;
     padding: 0.2rem;
@@ -137,7 +141,7 @@ body {
 .ingredients-macro-container h2{
     margin: 0rem;
     text-align: center;
-    background-color: hsl(240, 7%, 10%, 1);
+    background-color: hsl(240, 7%, 10%, 0.8);
     width: 100%;
     margin: auto;
 }
@@ -148,6 +152,7 @@ body {
     margin: auto;
     text-align: left;
     border: 0.1rem transparent hsl(240, 7%, 10%, 0.3);
+    border-radius: 0.2rem;
 
 }
 
@@ -171,9 +176,9 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(
-        hsla(240, 10%, 60%, 0.384), 
-        hsla(240, 10%, 20%, 0.7),
-        hsla(240, 5%, 10%, 0.7));
+        hsla(240, 10%, 60%, 0.4), 
+        hsla(240, 10%, 20%, 0.4),
+        hsla(240, 5%, 10%, 0.4));
     width: 15rem;
     padding: 0.2rem;
     margin: auto;
@@ -190,7 +195,7 @@ body {
 .ingredients-ingredients h2{
     margin: 0rem;
     text-align: center;
-    background-color: hsl(240, 7%, 10%, 1);
+    background-color: hsl(240, 7%, 10%, 0.8);
     width: 100%;
     margin: auto;
 }
@@ -201,7 +206,7 @@ input {
     padding: 0.6em 1.2em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: hsl(240, 10, 10);
     transition: border-color 0.2s;
 }
 
@@ -298,7 +303,7 @@ input {
 .ingredients-total-main h2{
     margin: 0rem;
     text-align: center;
-    background-color: hsl(240, 7%, 10%, 1);
+    background-color: hsl(240, 7%, 10%, 0.8);
     width: 100%;
     margin: auto;
 }
@@ -307,9 +312,9 @@ input {
     flex-direction: column;
     background: linear-gradient(
 
-        hsla(240, 10%, 60%, 0.384), 
-        hsla(240, 10%, 20%, 0.7),
-        hsla(240, 5%, 10%, 0.7));
+        hsla(240, 10%, 60%, 0.3), 
+        hsla(240, 10%, 20%, 0.3),
+        hsla(240, 5%, 10%, 0.3));
 
     padding: 0.2rem;
     margin: auto;
@@ -377,6 +382,7 @@ input {
     font-size: 1.2rem;
     margin: auto;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     font-weight: 660;
     justify-content: center;
     align-items: center;
@@ -439,6 +445,29 @@ input {
     .ingredients-original-macro{
         height: 10rem;
     }
+    header{
+        height: 3.5rem;
+        margin: 0;
+        padding: 0;
+    }
+    header button{
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+    #ingredientsButton {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        height: 3rem;
+    }
+    
+    #add-button {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    height: 3rem;
+    }
 }
 
 optgroup{
@@ -449,9 +478,9 @@ optgroup{
 .pop-up{
     display: flex;
     background: linear-gradient(
-        hsla(240, 5%, 15%, 0.98), 
-        hsla(240, 5%, 18%, 0.98),
-        hsla(240, 5%, 13%, 0.98));
+        hsla(240, 15%, 15%, 0.98), 
+        hsla(240, 15%, 18%, 0.98),
+        hsla(240, 15%, 13%, 0.98));
     align-items: center;
     justify-content: center;
     z-index: 10;
@@ -478,8 +507,9 @@ optgroup{
     justify-content: space-evenly;
     background: linear-gradient(
         hsla(240, 10%, 10%, 0.4), 
-        hsla(240, 10%, 20%, 0.7),
-        hsla(240, 5%, 5%, 0.9));
+        hsla(240, 40%, 20%, 0.3),
+        hsla(240, 5%, 5%, 0.4));
+    border-radius: 1rem;
 }
 
 .ingredients-calulated-macro{
@@ -571,8 +601,8 @@ optgroup{
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
-    background-color: hsl(240, 20%, 20%, 0.2);
-    width: 9rem;
+    background-color: hsl(240, 20%, 20%, 0.5);
+    width: 11.8rem;
     border-color: hsl(240, 5%, 10%, 0.5);
     border-style: solid;
     padding: 0.3rem;
@@ -627,3 +657,61 @@ header button:hover{
     overflow-y: hidden;
 }
 
+@media screen and (max-height: 550px ){
+    body{
+        height: 100dvh;
+    }
+    header button{
+        height: 2rem;
+        font-size: 0.9rem;
+        padding: 0;
+        margin: 0.2rem;
+        width: 10rem;
+    }
+
+    header {
+        padding: 0;
+        margin: 0;
+    }
+    .add-component-main-container{
+        display: flex;
+        flex-direction: row;
+        height: 75dvh;
+    }
+    .add-component-main-container input{
+        height: 10rem;
+        margin: 0;
+        padding: 0;
+        font-size: 0.3rem;
+    }
+    .add-component-main-container button{
+        height: 10rem;
+        margin: auto;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .ingredients-wrapper{
+        height: 70dvh;
+    }
+    .ingredients-dropdown-and-delete-icon input{
+        margin: 0.5rem;
+        padding: 0;
+        height: 1.5rem;
+        width: 10rem;
+    }
+    .ingredients-dropdown-and-delete-icon select{
+        margin: 0.5rem;
+        padding: 0;
+        height: 1.5rem;
+    }
+    .ingredients-dropdown-and-delete-icon svg{
+        margin: 0.5rem;
+        padding: 0;
+        height: 1.5rem;
+    }
+}
+header{
+    padding: 0;
+    margin: 0;
+}

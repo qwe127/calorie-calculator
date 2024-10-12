@@ -34,7 +34,7 @@ function DropDownList({setName, getDishIngredients, setDefaultCal, setDefaultCar
 
     return(
         ingredients.length || dishes.length ?
-        <select className='ingredients-select-element' id='ingredients' ref={selectorRef} onClick={()=>dropDownUpdater('ingredients')}>
+        <select className='ingredients-select-element' id='ingredients' ref={selectorRef} onClick={()=>dropDownUpdater('ingredients')} onChange={(e)=>{setName(e.target.value)}}>
                 <optgroup label="Ingredients:">
                 {
                     dropDownUpdater('ingredients')
