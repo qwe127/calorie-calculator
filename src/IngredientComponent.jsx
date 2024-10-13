@@ -332,7 +332,7 @@ function IngredientComponent(){
                             <div className='main-dish-container'>
                                 <h2>{name} {weightInput > 0 ? `(${weightInput}g):` : ''}</h2>
                                     <div className='ingredients-dish-macro-container'>
-                                        <div className='ingredients-calulated-macro'>
+                                        <div className='ingredients-calculated-macro'>
                                             <h3>Calculated Macro ({weightInput}g): </h3>
                                             <div className='ingredients-calculated-macro-div'>
                                                 <p><strong>Calories:</strong> {calories} cal</p>
